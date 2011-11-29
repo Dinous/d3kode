@@ -1,0 +1,19 @@
+.defaut{
+border-style: solid;
+border-color: #AAAAAA;
+border-width: 2px;
+}
+ 
+.selection{
+border-style: solid;
+border-color: #AAAAAA;
+border-width: 2px;
+background-color: #8888DD;
+}
+ 
+#idDiv{
+padding: 2px;
+border-width: 2px;
+border-style: inset;
+border-color: #AAAAAA;
+}

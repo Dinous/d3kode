@@ -1,0 +1,33 @@
+<!--This XML file does not appear to have any style information--> 
+<!--associated with it. The document tree is shown below. -->
+<!--For assistance related to logback-translator or configuration-->
+<!--files in general, please contact the logback user mailing list-->
+<!--at http://www.qos.ch/mailman/listinfo/logback-user-->
+<!---->
+<!--For professional support please see-->
+<!--http://www.qos.ch/shop/products/professionalSupport-->
+<!---->
+<configuration>
+  <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+  <appender name="R" class="ch.qos.logback.core.FileAppender">
+    <Append>false</Append>
+    <File>mTraceProject.log</File>
+    <encoder>
+      <pattern>%d{yyyy-MM-dd HH:mm:ss} %c [%p] %m%n</pattern>
+    </encoder>
+    <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+      <level>ERROR</level>
+    </filter>
+  </appender>
+  <logger name="org.liris.ktbs.dao.rest" level="warn"/>
+  <logger name="org.liris.ktbs.examples" level="error"/>
+  <logger name="org.liris.ktbs.service.caching.tests" level="warn"/>
+  <root level="warn">
+    <appender-ref ref="stdout"/>
+    <appender-ref ref="R"/>
+  </root>
+</configuration>

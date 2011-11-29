@@ -1,0 +1,28 @@
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+   "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+
+    <!-- a tab library descriptor -->
+<taglib xmlns="http://java.sun.com/JSP/TagLibraryDescriptor">
+  <tlib-version>1.0</tlib-version>
+  <jsp-version>1.2</jsp-version>
+  <short-name>SvgTag</short-name>
+
+  <!-- this tag manipulates its body content by converting it to upper case
+    -->
+  <tag>
+    <name>svg</name>
+    <tag-class>org.liris.mTrace.tag.SvgTag</tag-class>
+    <body-content>empty</body-content>
+    <attribute>
+    	<name>path</name>
+      	<required>true</required>
+       	<rtexprvalue>true</rtexprvalue>
+      	<description><![CDATA[Path of Svg File]]></description>
+    </attribute>
+  </tag>
+  <tag>
+    <name>timeTag</name>
+    <tag-class>org.liris.mTrace.tag.TimeTag</tag-class>
+    <body-content>empty</body-content>
+  </tag>
+</taglib>

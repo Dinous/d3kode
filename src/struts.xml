@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC  "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN" 
+"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+
+<struts>
+	<constant name="struts.custom.i18n.resources" value="global" />
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="false" />
+	<!-- <constant name="struts.configuration.xml.reload" value="true" /> -->
+	<!-- <constant name="struts.i18n.reload" value="true" /> -->
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+    <constant name="struts.convention.result.path" value="/jsp"/>
+    <constant name="struts.convention.action.packages" value="org.liris.mTrace.actions"/>
+    <constant name="struts.url.escapeAmp" value="false" />
+	
+	
+	<package name="mTrace"  namespace="/" extends="struts-default,json-default">
+      <action name="logout" class="org.liris.mTrace.actions.LogoutAction">
+         <result name="login" type="redirectAction">
+           <param name="actionName">accueil</param>
+          </result>
+      </action>
+  </package>
+	
+</struts>

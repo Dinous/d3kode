@@ -1,0 +1,135 @@
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+#top {
+    position: absolute;
+}
+h1, p {
+    margin: 0;
+    padding: 0.3em 0;
+}
+#container {
+    min-height: 800px;
+    
+}
+#footer-spacer {
+    clear:both; height:10px; display:block;
+}
+#footer {
+    width:auto; display:block; height:24px;
+}
+
+.tdLabel{
+	min-width: 175px;
+}
+
+fieldset table {
+	margin: auto;
+	width: 90%;	
+}
+
+table.border {
+  border: solid 1px ;
+  border-color: #2E6E9E;
+  margin-bottom: 5px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 5px;
+  width: 100%;
+}
+
+table.borderIndex {
+  border: solid 1px black;
+  margin: 20px 0;
+}
+
+table.border thead tr {
+    background-color: #DFEFFC;
+}
+
+table.border thead tr.borderLigth {
+    background-color:#DFEFFC; 
+    /* #B1B7C1; */
+}
+
+table.border tbody tr td {
+	text-align: center;
+	}
+
+body, input, select, td, textarea,a {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    vertical-align: top;
+}
+
+table.layout{
+	margin-left: auto; 
+  	margin-right: auto; 
+	width:95%;
+	height:95%;
+}
+
+table.layout thead{
+	height:50px;
+}
+table.layout tbody tr td.menu{
+	width:10%;
+}
+table.layout tbody tr td.body{
+	width:90%;
+}
+table.layout tfoot{
+	height:5%;
+}
+table.layout tfoot tr td{
+	text-align: center;
+}
+.tip {
+	display: none;
+	background-color: white;
+	border-color: black;
+	border-style: solid;
+	border-width: 1px;
+	z-index:1;
+}
+.tabHead {
+	border-bottom: solid 1px black;
+}
+.tabHead tbody tr td{
+	padding-right: 10px;
+	padding-left: 10px;
+	border-left: solid 1px black;
+	border-right: solid 1px black;
+	border-top: solid 1px black;
+}
+
+.svgObject{
+	width: 100%;
+	height: 725px;
+	vertical-align: middle;	
+}
+
+select.criteria{
+	min-width:140px;
+	min-height:150px;
+}
+
+a img{
+border:0px solid #FFF;
+}
+.actionMessage{
+	color : green;
+}
+
+.label {
+    font-style: italic;
+}
+
+.required {
+    color: red;
+}

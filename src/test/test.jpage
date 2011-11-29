@@ -1,0 +1,11 @@
+java.lang.String javaHome = org.apache.commons.lang.SystemUtils.JAVA_HOME;
+System.out.println(javaHome);
+javaHome = javaHome.replaceAll("\\\\","/");
+System.out.println(javaHome);
+javaHome = javaHome.replaceAll(" ", "\\\\\\ ");
+System.out.println(javaHome);
+javaHome = javaHome.replaceAll("\\(", "\\\\\\(");
+javaHome = javaHome.replaceAll("\\)", "\\\\\\)");
+System.out.println(javaHome);
+javaHome = javaHome.replaceAll("C:/", "/cygdrive/c/");
+System.out.println(javaHome);

@@ -1,0 +1,450 @@
+<tables>
+<table id="http://localhost:8001/base2/3Trace/1Trace_419d29a1cd518c8707efa3c9f03543c6" class="tip">
+<thead>
+<tr>
+<td colspan="2"><a href="#" onclick="close('http://localhost:8001/base2/3Trace/1Trace_419d29a1cd518c8707efa3c9f03543c6')">
+						Close</a></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hasBegin</td><td>0</td>
+</tr>
+<tr>
+<td>hasEnd</td><td>5</td>
+</tr>
+<tr>
+<td>obselType</td><td>ActionInstructeur</td>
+</tr>
+<tr>
+<td>label</td><td>Demande de changement de mode</td>
+</tr>
+<tr>
+<td>lines</td><td>0 5</td>
+</tr>
+<tr>
+<td>params</td><td></td>
+</tr>
+</tbody>
+</table>
+<table id="http://localhost:8001/base2/3Trace/1Trace_d348faac372c38cd4349b0335adac259" class="tip">
+<thead>
+<tr>
+<td colspan="2"><a href="#" onclick="close('http://localhost:8001/base2/3Trace/1Trace_d348faac372c38cd4349b0335adac259')">
+						Close</a></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hasBegin</td><td>2</td>
+</tr>
+<tr>
+<td>hasEnd</td><td>10</td>
+</tr>
+<tr>
+<td>obselType</td><td>ActionOperateur</td>
+</tr>
+<tr>
+<td>label</td><td>Image de conduite</td>
+</tr>
+<tr>
+<td>lines</td><td>2 10</td>
+</tr>
+<tr>
+<td>params</td><td></td>
+</tr>
+</tbody>
+</table>
+<table id="http://localhost:8001/base2/3Trace/2Trace_a1c03927fae9493514c031f3f7b68960" class="tip">
+<thead>
+<tr>
+<td colspan="2"><a href="#" onclick="close('http://localhost:8001/base2/3Trace/2Trace_a1c03927fae9493514c031f3f7b68960')">
+						Close</a></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hasBegin</td><td>11</td>
+</tr>
+<tr>
+<td>hasEnd</td><td>16</td>
+</tr>
+<tr>
+<td>obselType</td><td>ActionInstructeur</td>
+</tr>
+<tr>
+<td>label</td><td>BAS TEMPS DE DOUBLEMENT CNI</td>
+</tr>
+<tr>
+<td>lines</td><td>11 16</td>
+</tr>
+<tr>
+<td>params</td><td></td>
+</tr>
+</tbody>
+</table>
+<table id="http://localhost:8001/base2/3Trace/2Trace_bc2d9c47859b5fac9eaaed5718a69c27" class="tip">
+<thead>
+<tr>
+<td colspan="2"><a href="#" onclick="close('http://localhost:8001/base2/3Trace/2Trace_bc2d9c47859b5fac9eaaed5718a69c27')">
+						Close</a></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hasBegin</td><td>18</td>
+</tr>
+<tr>
+<td>hasEnd</td><td>26</td>
+</tr>
+<tr>
+<td>obselType</td><td>ActionInstructeur</td>
+</tr>
+<tr>
+<td>label</td><td>FONCT 3 BOUCLES</td>
+</tr>
+<tr>
+<td>lines</td><td>18 26</td>
+</tr>
+<tr>
+<td>params</td><td></td>
+</tr>
+</tbody>
+</table>
+<table id="http://localhost:8001/base2/2Trace/a1c03927fae9493514c031f3f7b68960" class="tip">
+<thead>
+<tr>
+<td colspan="2"><a href="#" onclick="close('http://localhost:8001/base2/2Trace/a1c03927fae9493514c031f3f7b68960')">
+						Close</a></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hasBegin</td><td>11</td>
+</tr>
+<tr>
+<td>hasEnd</td><td>16</td>
+</tr>
+<tr>
+<td>obselType</td><td>ActionInstructeur</td>
+</tr>
+<tr>
+<td>label</td><td>BAS TEMPS DE DOUBLEMENT CNI</td>
+</tr>
+<tr>
+<td>lines</td><td>16 16 12 16 11 11</td>
+</tr>
+<tr>
+<td>params</td><td></td>
+</tr>
+</tbody>
+</table>
+<table id="http://localhost:8001/base2/2Trace/bc2d9c47859b5fac9eaaed5718a69c27" class="tip">
+<thead>
+<tr>
+<td colspan="2"><a href="#" onclick="close('http://localhost:8001/base2/2Trace/bc2d9c47859b5fac9eaaed5718a69c27')">
+						Close</a></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hasBegin</td><td>18</td>
+</tr>
+<tr>
+<td>hasEnd</td><td>26</td>
+</tr>
+<tr>
+<td>obselType</td><td>ActionInstructeur</td>
+</tr>
+<tr>
+<td>label</td><td>FONCT 3 BOUCLES</td>
+</tr>
+<tr>
+<td>lines</td><td>19 26 18 20 24 26</td>
+</tr>
+<tr>
+<td>params</td><td></td>
+</tr>
+</tbody>
+</table>
+<table id="http://localhost:8001/base2/0Trace/419d29a1cd518c8707efa3c9f03543c6" class="tip">
+<thead>
+<tr>
+<td colspan="2"><a href="#" onclick="close('http://localhost:8001/base2/0Trace/419d29a1cd518c8707efa3c9f03543c6')">
+						Close</a></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hasBegin</td><td>0</td>
+</tr>
+<tr>
+<td>hasEnd</td><td>5</td>
+</tr>
+<tr>
+<td>obselType</td><td>ActionInstructeur</td>
+</tr>
+<tr>
+<td>label</td><td>Demande de changement de mode</td>
+</tr>
+<tr>
+<td>lines</td><td></td>
+</tr>
+<tr>
+<td>params</td><td></td>
+</tr>
+</tbody>
+</table>
+<table id="http://localhost:8001/base2/0Trace/d348faac372c38cd4349b0335adac259" class="tip">
+<thead>
+<tr>
+<td colspan="2"><a href="#" onclick="close('http://localhost:8001/base2/0Trace/d348faac372c38cd4349b0335adac259')">
+						Close</a></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hasBegin</td><td>2</td>
+</tr>
+<tr>
+<td>hasEnd</td><td>10</td>
+</tr>
+<tr>
+<td>obselType</td><td>ActionOperateur</td>
+</tr>
+<tr>
+<td>label</td><td>Image de conduite</td>
+</tr>
+<tr>
+<td>lines</td><td></td>
+</tr>
+<tr>
+<td>params</td><td></td>
+</tr>
+</tbody>
+</table>
+<table id="http://localhost:8001/base2/0Trace/cf63ca1bcdbfdecb43989c9d87405cd3" class="tip">
+<thead>
+<tr>
+<td colspan="2"><a href="#" onclick="close('http://localhost:8001/base2/0Trace/cf63ca1bcdbfdecb43989c9d87405cd3')">
+						Close</a></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hasBegin</td><td>11</td>
+</tr>
+<tr>
+<td>hasEnd</td><td>11</td>
+</tr>
+<tr>
+<td>obselType</td><td>Alarme</td>
+</tr>
+<tr>
+<td>label</td><td>BAS TEMPS DE DOUBLEMENT CNI</td>
+</tr>
+<tr>
+<td>lines</td><td></td>
+</tr>
+<tr>
+<td>params</td><td></td>
+</tr>
+</tbody>
+</table>
+<table id="http://localhost:8001/base2/0Trace/49e9fc1e3489177876a46232d8002b67" class="tip">
+<thead>
+<tr>
+<td colspan="2"><a href="#" onclick="close('http://localhost:8001/base2/0Trace/49e9fc1e3489177876a46232d8002b67')">
+						Close</a></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hasBegin</td><td>16</td>
+</tr>
+<tr>
+<td>hasEnd</td><td>16</td>
+</tr>
+<tr>
+<td>obselType</td><td>Alarme</td>
+</tr>
+<tr>
+<td>label</td><td>BAS TEMPS DE DOUBLEMENT CNI</td>
+</tr>
+<tr>
+<td>lines</td><td></td>
+</tr>
+<tr>
+<td>params</td><td></td>
+</tr>
+</tbody>
+</table>
+<table id="http://localhost:8001/base2/0Trace/8358562743854adf844a33ed3f7642ab" class="tip">
+<thead>
+<tr>
+<td colspan="2"><a href="#" onclick="close('http://localhost:8001/base2/0Trace/8358562743854adf844a33ed3f7642ab')">
+						Close</a></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hasBegin</td><td>12</td>
+</tr>
+<tr>
+<td>hasEnd</td><td>16</td>
+</tr>
+<tr>
+<td>obselType</td><td>ActionOperateur</td>
+</tr>
+<tr>
+<td>label</td><td>Image de conduite</td>
+</tr>
+<tr>
+<td>lines</td><td></td>
+</tr>
+<tr>
+<td>params</td><td></td>
+</tr>
+</tbody>
+</table>
+<table id="http://localhost:8001/base2/0Trace/88f0d8ffb6c47043610132b79118dc94" class="tip">
+<thead>
+<tr>
+<td colspan="2"><a href="#" onclick="close('http://localhost:8001/base2/0Trace/88f0d8ffb6c47043610132b79118dc94')">
+						Close</a></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hasBegin</td><td>18</td>
+</tr>
+<tr>
+<td>hasEnd</td><td>20</td>
+</tr>
+<tr>
+<td>obselType</td><td>Alarme</td>
+</tr>
+<tr>
+<td>label</td><td>FONCT 3 BOUCLES</td>
+</tr>
+<tr>
+<td>lines</td><td></td>
+</tr>
+<tr>
+<td>params</td><td></td>
+</tr>
+</tbody>
+</table>
+<table id="http://localhost:8001/base2/0Trace/dc82026e7406f5b2e1d041a1d91ac98f" class="tip">
+<thead>
+<tr>
+<td colspan="2"><a href="#" onclick="close('http://localhost:8001/base2/0Trace/dc82026e7406f5b2e1d041a1d91ac98f')">
+						Close</a></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hasBegin</td><td>24</td>
+</tr>
+<tr>
+<td>hasEnd</td><td>26</td>
+</tr>
+<tr>
+<td>obselType</td><td>Alarme</td>
+</tr>
+<tr>
+<td>label</td><td>FONCT 3 BOUCLES</td>
+</tr>
+<tr>
+<td>lines</td><td></td>
+</tr>
+<tr>
+<td>params</td><td></td>
+</tr>
+</tbody>
+</table>
+<table id="http://localhost:8001/base2/0Trace/f10d1861c0c42b85319374f548f389bb" class="tip">
+<thead>
+<tr>
+<td colspan="2"><a href="#" onclick="close('http://localhost:8001/base2/0Trace/f10d1861c0c42b85319374f548f389bb')">
+						Close</a></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hasBegin</td><td>19</td>
+</tr>
+<tr>
+<td>hasEnd</td><td>26</td>
+</tr>
+<tr>
+<td>obselType</td><td>ActionOperateur</td>
+</tr>
+<tr>
+<td>label</td><td>Image de conduite</td>
+</tr>
+<tr>
+<td>lines</td><td></td>
+</tr>
+<tr>
+<td>params</td><td></td>
+</tr>
+</tbody>
+</table>
+<table id="http://localhost:8001/base2/1Trace/419d29a1cd518c8707efa3c9f03543c6" class="tip">
+<thead>
+<tr>
+<td colspan="2"><a href="#" onclick="close('http://localhost:8001/base2/1Trace/419d29a1cd518c8707efa3c9f03543c6')">
+						Close</a></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hasBegin</td><td>0</td>
+</tr>
+<tr>
+<td>hasEnd</td><td>5</td>
+</tr>
+<tr>
+<td>obselType</td><td>ActionInstructeur</td>
+</tr>
+<tr>
+<td>label</td><td>Demande de changement de mode</td>
+</tr>
+<tr>
+<td>lines</td><td>0 5</td>
+</tr>
+<tr>
+<td>params</td><td></td>
+</tr>
+</tbody>
+</table>
+<table id="http://localhost:8001/base2/1Trace/d348faac372c38cd4349b0335adac259" class="tip">
+<thead>
+<tr>
+<td colspan="2"><a href="#" onclick="close('http://localhost:8001/base2/1Trace/d348faac372c38cd4349b0335adac259')">
+						Close</a></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hasBegin</td><td>2</td>
+</tr>
+<tr>
+<td>hasEnd</td><td>10</td>
+</tr>
+<tr>
+<td>obselType</td><td>ActionOperateur</td>
+</tr>
+<tr>
+<td>label</td><td>Image de conduite</td>
+</tr>
+<tr>
+<td>lines</td><td>2 10</td>
+</tr>
+<tr>
+<td>params</td><td></td>
+</tr>
+</tbody>
+</table>
+</tables>
