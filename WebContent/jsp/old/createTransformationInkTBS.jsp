@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/xml; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix ="s" uri="/struts-tags" %>
-<%@ taglib prefix ="sx" uri="/struts-dojo-tags" %>
 
 <s:url var="d_url" value="/detail_Transformation.action" />
 <s:url var="c_url" value="/createTransformation_Filter_load.action" />

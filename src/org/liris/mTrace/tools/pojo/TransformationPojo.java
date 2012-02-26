@@ -60,7 +60,7 @@ public class TransformationPojo  implements Serializable{
 	for (RulePojo rule : rules) {
 	    rule.createKtbsString();
 	    IMethod method = null;
-	    if (rule.getUri() != null && rule.getUri().startsWith("_")) {
+	    if (rule.getUri() != null && rule.getUri().startsWith("http")) {
 		// MAJ
 		method = SingleKtbs.getInstance().updateMethodKtbs(
 			rule.getUri(), rule.getKtbsString(), rule.getLabel(),
@@ -103,13 +103,13 @@ public class TransformationPojo  implements Serializable{
     	IOFileFilter fileFilter = FileFilterUtils.prefixFileFilter("_");
     	Collection<File> transformationFiles = FileUtils.listFiles(folderTransformation, fileFilter, null);
     	for (File file : transformationFiles) {
-    	    if(!file.getAbsolutePath().equals(transformationLocalName)){
+    	    //if(!file.getAbsolutePath().equals(transformationLocalName)){
         	    TransformationPojo transformationPojo = TransformationPojo.deserialize(file);
-        	    if(transformationPojo != null && transformationPojo.getTraceModelSourceSelected().equals(traceModelSource)
+        	    if(transformationPojo != null && transformationPojo.getRules() != null  && transformationPojo.getTraceModelSourceSelected().equals(traceModelSource)
         		    && transformationPojo.getTraceModelTargetSelected().equals(traceModelDest)){
         		rulePojos.addAll(transformationPojo.getRules());
         	    }
-    	    }
+    	    //}
 	}
     	return rulePojos;
     }
@@ -298,7 +298,8 @@ public class TransformationPojo  implements Serializable{
     	Collection<File> transformationFiles = FileUtils.listFiles(folderTransformation, fileFilter, null);
     	for (File transformationFile : transformationFiles) {
     	    TransformationPojo transformationPojo = TransformationPojo.deserialize(transformationFile);
-    	    if(transformationPojo != null && !transformationPojo.getLocalName().equals(transformationLocalName)){
+    	    //&& !transformationPojo.getLocalName().equals(transformationLocalName)
+    	    if(transformationPojo != null ){
         	    for (RulePojo rulePojo : transformationPojo.getRules()) {
     		    	if(rulePojo.getUri() != null && rulePojo.getUri().equals(ruleToCopyUri)){
     		    	    return rulePojo;
@@ -319,7 +320,8 @@ public class TransformationPojo  implements Serializable{
     	Collection<File> transformationFiles = FileUtils.listFiles(folderTransformation, fileFilter, null);
     	for (File transformationFile : transformationFiles) {
     	    TransformationPojo transformationPojo = TransformationPojo.deserialize(transformationFile);
-    	    if(transformationPojo != null && !transformationPojo.getLocalName().equals(transformationLocalName)){
+    	    //&& !transformationPojo.getLocalName().equals(transformationLocalName)
+    	    if(transformationPojo != null ){
         	    for (RulePojo rulePojo : transformationPojo.getRules()) {
     		    	if(rulePojo.getUri() != null && rulePojo.getUri().equals(ruleToCopyUri)){
     		    	    return transformationPojo;

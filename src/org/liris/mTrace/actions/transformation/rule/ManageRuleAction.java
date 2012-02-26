@@ -377,6 +377,8 @@ public class ManageRuleAction extends ActionSupport implements SessionAware {
 		indiceRule = transformation.getRules().size();
 	    }
 	    rulePojo.setId(indiceRule);
+	    rulePojo.setUri("");
+	    rulePojo.setLabel("Copy of "+rulePojo.getLabel());
 	    transformation.getRules().add(rulePojo);
 	    transformation.serialize();
 	} catch (Exception e) {

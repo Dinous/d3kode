@@ -67,7 +67,7 @@ public class EditGridEntryKtbsAction extends D3KODEAction {
 	        String uri = ((List<String>)getSession().get("resourceKtbs")).get(removeId-1);
 	        
 	        MTraceConst.deleteResource(uri);
-	        
+	        System.out.println("Delete ressource "+uri);
 //	        ManageDB.delUser(user);
 	        ((List<String>)getSession().get("resourceKtbs")).remove(removeId-1);
 	      }
