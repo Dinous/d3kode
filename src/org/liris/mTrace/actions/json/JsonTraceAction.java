@@ -6,7 +6,6 @@ package org.liris.mTrace.actions.json;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.struts2.convention.annotation.Action;
@@ -24,8 +23,6 @@ import org.liris.mTrace.actions.D3KODEAction;
 import org.liris.mTrace.kTBS.SingleKtbs;
 import org.liris.mTrace.tools.pojo.TransformationPojo;
 
-import com.opensymphony.xwork2.ActionSupport;
-
 /**
  * .
  * 
@@ -37,7 +34,7 @@ public class JsonTraceAction extends D3KODEAction {
 
     private String traceUri;
     private List<ListValue> listTrace;
-    private List<TransformationPojo> listTransformation;
+    private List<ListValue> listTransformation;
 
     @Actions({ @Action(value = "/listTrace", results = { @Result(name = "success", type = "json") }) })
     @Override
@@ -68,7 +65,7 @@ public class JsonTraceAction extends D3KODEAction {
 	    String traceModelSourceUri = SingleKtbs.getInstance().getRoot()
 		    .getResourceService().getTrace(traceUri).getTraceModel()
 		    .getUri();
-	    listTransformation = new ArrayList<TransformationPojo>();
+	    listTransformation = new ArrayList<ListValue>();
 	    File transformationFolder = new File(MTraceConst.WORK_TRANSFORMATION_PATH);
 	    for (File transformationFile : transformationFolder.listFiles()) {
 		if (transformationFile.isFile()
@@ -77,17 +74,15 @@ public class JsonTraceAction extends D3KODEAction {
 			IMethod superMethod = SingleKtbs.getInstance().getMethodWithLocalName(transformationFile.getName());
 			if(superMethod!=null && superMethod.getMethodParameters() != null){
 			    for (IMethodParameter methodParameter : superMethod.getMethodParameters()) {
-				if(methodParameter.getName().equals("submethods")){
-				    if(methodParameter.getValue() != null && 
-					    !methodParameter.getValue().equals("null")){
-					TransformationPojo transformationPojo = TransformationPojo
-						.deserialize(transformationFile);
-					if (transformationPojo.getTraceModelSourceSelected()
-						.equals(traceModelSourceUri)) {
-					    listTransformation.add(transformationPojo);
-					}
-				    }
-				}
+			    	if(methodParameter.getName().equals("submethods")){
+			    		if(methodParameter.getValue() != null &&   !methodParameter.getValue().equals("null")){
+			    			TransformationPojo transformationPojo = TransformationPojo.deserialize(transformationFile);
+			    			if (transformationPojo.getTraceModelSourceSelected().equals(traceModelSourceUri)) {
+			    				listTransformation.add(new ListValue(transformationPojo.getUri(), transformationPojo.getLabel()));
+			    			}
+			    		}
+			    		break;
+			    	}
 			    }
 			}
 			
@@ -113,11 +108,11 @@ public class JsonTraceAction extends D3KODEAction {
 	return listTrace;
     }
 
-    public List<TransformationPojo> getListTransformation() {
+    public List<ListValue> getListTransformation() {
         return listTransformation;
     }
 
-    public void setListTransformation(List<TransformationPojo> listTransformation) {
+    public void setListTransformation(List<ListValue> listTransformation) {
         this.listTransformation = listTransformation;
     }
 

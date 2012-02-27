@@ -72,7 +72,7 @@ public class TransformationAction extends D3KODEAction {
 	    	Collection<File> transformationFiles = FileUtils.listFiles(folderTransformation, fileFilter, null);
 	    	String transformationFileName = TRANSFORMATION+transformationFiles.size();
 	    	if (transformation != null)
-	    	    transformation.serialize(new File(MTraceConst.WORK_TRANSFORMATION_PATH+transformationFileName));
+	    	    transformation.serialize(new File(MTraceConst.WORK_TRANSFORMATION_PATH+transformationFileName), true);
 	}
         return SUCCESS;
     }
@@ -91,12 +91,12 @@ public class TransformationAction extends D3KODEAction {
 	        transformation.setDescription(description);
 	        transformation.setTraceModelSourceSelected(newSourceTraceModel);
 	        transformation.setTraceModelTargetSelected(newTargetTraceModel);
-	        transformation.serialize(new File(transformation.getUri()));
+	        transformation.serialize(new File(transformation.getUri()), true);
 	    }else{
 	    	IMethod superMethod = SingleKtbs.getInstance().createOrUpdateSuperMethodKtbs(null,null, transformation.getLabel(), transformation.getTraceModelTarget(), transformation.getDescription());
 	    	transformation.setLocalName(superMethod.getLocalName());
 	    	if (transformation != null)
-	    	    transformation.serialize(new File(MTraceConst.WORK_TRANSFORMATION_PATH+superMethod.getLocalName()));
+	    	    transformation.serialize(new File(MTraceConst.WORK_TRANSFORMATION_PATH+superMethod.getLocalName()), true);
 	    }
 	} catch (Exception e) {
 	    e.printStackTrace();
@@ -163,9 +163,12 @@ public class TransformationAction extends D3KODEAction {
 	List<TransformationPojo> list = new ArrayList<TransformationPojo>();
 	File folderTransformation = new File(MTraceConst.WORK_TRANSFORMATION_PATH);
 	File[] transformationFiles = folderTransformation.listFiles();
+	Long tm = System.currentTimeMillis();
 	for (File transformationFile : transformationFiles) {
 	    if(!transformationFile.getName().startsWith(".")){
+	    	System.out.println("Deserialization Debut " + (System.currentTimeMillis()- tm));
 		TransformationPojo transformationPojo = TransformationPojo.deserialize(transformationFile);
+		System.out.println("Deserialization FIn " + (System.currentTimeMillis()- tm));
 		if(transformationPojo != null){
 		    list.add(transformationPojo);
 		}

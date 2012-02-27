@@ -19,7 +19,6 @@ import org.apache.commons.io.filefilter.FileFilterUtils;
 import org.apache.commons.io.filefilter.IOFileFilter;
 import org.apache.commons.lang.StringUtils;
 import org.liris.ktbs.domain.interfaces.IMethod;
-import org.liris.ktbs.domain.interfaces.IMethodParameter;
 import org.liris.ktbs.domain.interfaces.ITraceModel;
 import org.liris.mTrace.MTraceConst;
 import org.liris.mTrace.kTBS.SingleKtbs;
@@ -45,6 +44,7 @@ public class TransformationPojo  implements Serializable{
     private List<RulePojo> rules; 
     private String description;
     private Boolean isInKtbs = false;
+    private boolean changed;
     
     public boolean saveIntoKtbs() throws IOException{
 	//TODO à enelver quand le kTBS gèrera mieux le SPARQL
@@ -91,7 +91,7 @@ public class TransformationPojo  implements Serializable{
 	    localName = superMethod.getLocalName();
 	}
 	
-	serialize();
+	serialize(false);
 	
 	return isInKtbs;
     }
@@ -118,7 +118,7 @@ public class TransformationPojo  implements Serializable{
     public static TransformationPojo deserialize(File methodFile) throws IOException, ClassNotFoundException {
 	if(!methodFile.exists()){
 	    TransformationPojo newTransformationPojo = new TransformationPojo();
-	    newTransformationPojo.serialize(methodFile);
+	    newTransformationPojo.serialize(methodFile, true);
 	}
 	FileInputStream fis = new FileInputStream(methodFile);
 	ObjectInputStream ois = new ObjectInputStream(fis);		
@@ -139,10 +139,11 @@ public class TransformationPojo  implements Serializable{
 	return transformationPojo;
     }
 
-    public void serialize( File methodFile) throws IOException {
+    public void serialize( File methodFile, boolean changed) throws IOException {
     	FileOutputStream fos = new FileOutputStream(methodFile); 
     	ObjectOutputStream oos = new ObjectOutputStream(fos);
     	this.setUri(methodFile.getAbsolutePath());
+    	this.setChanged(changed);
     	oos.writeObject(this);
     	oos.close();
     }
@@ -152,8 +153,12 @@ public class TransformationPojo  implements Serializable{
      * 
      */
     public void serialize() throws IOException {
-	serialize(new File(this.uri));
+    	serialize(true);
     } 
+    
+    public void serialize(boolean changed) throws IOException {
+    	serialize(new File(this.uri), changed);
+        }
     
     public void setLocalName(String localName) {
 	this.localName = localName;
@@ -211,8 +216,12 @@ public class TransformationPojo  implements Serializable{
     }
 
     public Boolean getIsInKtbs() {
+    	return !changed;
+    	/*Long tm = System.currentTimeMillis();
+    	System.out.println("getIsInKtbs debut " + (System.currentTimeMillis()- tm));
 	File file = new File(this.getUri());
 	if(file.exists()){
+		
 	IMethod superMethod = SingleKtbs.getInstance().getMethod(SingleKtbs.getInstance().getCurrentBase().getUri() + this.localName);
 	
 	if(superMethod!=null && superMethod.getMethodParameters() != null){
@@ -220,6 +229,7 @@ public class TransformationPojo  implements Serializable{
 		if(methodParameter.getName().equals("submethods")){
 		    if(methodParameter.getValue() == null || methodParameter.getValue().equals("null")){
 			isInKtbs = false;
+			System.out.println("getIsInKtbs fin 225 " + (System.currentTimeMillis()- tm));
 			    return false;
 		    }
 		break;	
@@ -237,8 +247,8 @@ public class TransformationPojo  implements Serializable{
 			methodString = parameter.getValue();
 		    }
 		}
-		rule.createKtbsString();
-		if(methodString != null && !rule.getKtbsString().equals(methodString)){
+		//rule.createKtbsString();
+		if(methodString != null && rule.getKtbsString() != null && !rule.getKtbsString().equals(methodString)){
 		    isInKtbs = false;
 		    break;
 		}else{
@@ -264,11 +274,12 @@ public class TransformationPojo  implements Serializable{
 	    }
 	}
     }else{
+    	System.out.println("getIsInKtbs fin 270 " + (System.currentTimeMillis()- tm));
 	return false;
     }
 	
-	
-	return isInKtbs;
+	System.out.println("getIsInKtbs fin 274 " + (System.currentTimeMillis()- tm));
+	return isInKtbs;*/
     }
 
     public void setDescription(String description) {
@@ -331,4 +342,14 @@ public class TransformationPojo  implements Serializable{
     	}
 	return null;
     }
+
+
+	public boolean isChanged() {
+		return changed;
+	}
+
+
+	public void setChanged(boolean changed) {
+		this.changed = changed;
+	}
 }
