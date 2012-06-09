@@ -1,10 +1,15 @@
 package org.liris.mTrace.tools.pojo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserPojo implements Comparable<UserPojo> {
+public class UserPojo implements Comparable<UserPojo>, Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2360789063339784430L;
 	private Integer id;
 	private String login;
 	private String password;

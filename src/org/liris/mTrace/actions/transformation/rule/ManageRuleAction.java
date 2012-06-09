@@ -377,6 +377,8 @@ public class ManageRuleAction extends ActionSupport implements SessionAware {
 		indiceRule = transformation.getRules().size();
 	    }
 	    rulePojo.setId(indiceRule);
+	    rulePojo.setUri("");
+	    rulePojo.setLabel("Copy of "+rulePojo.getLabel());
 	    transformation.getRules().add(rulePojo);
 	    transformation.serialize();
 	} catch (Exception e) {
@@ -522,7 +524,7 @@ public class ManageRuleAction extends ActionSupport implements SessionAware {
 		    ruleSelected.setLabel(label);
 		}
 		
-		transformation.serialize(new File(transformation.getUri()));
+		transformation.serialize(new File(transformation.getUri()), true);
 	    } catch (Exception e) {
 		addActionError(e.getMessage());
 	    }
@@ -546,7 +548,7 @@ public class ManageRuleAction extends ActionSupport implements SessionAware {
 			transformation.getRules().indexOf(ruleSelected));
 		}
 		ruleSelected =null;
-		transformation.serialize(new File(transformation.getUri()));
+		transformation.serialize(new File(transformation.getUri()), true);
 	    } catch (Exception e) {
 		System.out.println("delete_rule"+e.getMessage());
 	    }

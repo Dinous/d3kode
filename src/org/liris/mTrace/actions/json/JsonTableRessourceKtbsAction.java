@@ -64,6 +64,11 @@ public class JsonTableRessourceKtbsAction extends D3KODEAction{
 	    int to = (getRows() * getPage());
 
 	    if (to > getRecord()) to = getRecord();
+	    int from = to - getRows();
+	    
+	    if(from > 0){
+	    	ressources = ressources.subList((getPage()-1)*getRows(), to);
+	    }
 	    
 	    setGridedittableKtbs(ressources);
 	    setTotal((int) Math.ceil((double) getRecord() / (double) getRows()));

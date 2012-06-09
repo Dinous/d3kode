@@ -782,7 +782,7 @@ public class SingleKtbs {
 	 * @return
 	 */
 	public IMethod updateMethodKtbs(String uri, String ktbsString, String label, String description, ITraceModel traceModelDestination,String inherits) {
-	    IMethod method = root.getResourceService().getMethod(getCurrentBase().getUri() + uri);
+	    IMethod method = root.getResourceService().getMethod(uri);
 	    if(method != null){
 		Set<IMethodParameter> p = new HashSet<IMethodParameter>();
 		for(IMethodParameter methodParameter:method.getMethodParameters()){ 
